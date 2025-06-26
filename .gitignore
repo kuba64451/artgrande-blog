@@ -1,0 +1,9 @@
+# Ignoruj foldery zależności i buildu
+node_modules/
+.next/
+out/
+.env
+.DS_Store
+
+# systemowe i edytora
+.vscode/
