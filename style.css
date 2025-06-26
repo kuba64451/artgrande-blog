@@ -58,59 +58,6 @@
           margin-bottom: 2rem;
             
           }
-        
-        .hero {
-            width: 100%;               /* nie 100vw, żeby nie było poziomego scrolla */
-            height: 100vh;             /* zawsze równo wysokości okna przeglądarki */
-            background-image: url('grafiki/grafika_home.png');
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-position: center;
-            background-attachment: fixed; /* opcjonalnie: tło “zostaje” przy scroll’u */
-            
-            /* centrowanie zawartości */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            
-            position: relative;
-            overflow: hidden;
-            color: white;
-          }
-          /* Overlay (ciemne przyciemnienie dla lepszej czytelności tekstu) */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Zmniejsz, jeśli za ciemne */
-}
-/* Styl chochlika */
-.imp {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: url('ikony/imp.png') no-repeat center/contain;
-  transition: transform 5s ease-in-out;
-}
-        /* Treść na tle */
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 600px;
-    margin-top: 80px; /* odstęp równy wysokości headera */
-}
-
-.hero h1 {
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
 
 /* Przycisk */
 .btn {
