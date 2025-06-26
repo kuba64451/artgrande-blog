@@ -193,13 +193,14 @@ export default function PostPage() {
       </Head>
 
       <header className="home">
-        <a href="#"><img src="/loga/logo.png" alt="Logo" /></a>
+        <a href="https://artgrande.art"><img src="/loga/logo.png" alt="Logo" /></a>
         <nav>
           <ul>
-            <li><a href="/" className="active"><img src="/ikony/home.png" style={{ width: '20px', height: '15px' }} /></a></li>
-            <li><a href="/spektakle">Spektakle dla szkół</a></li>
-            <li><a href="/kino">Kino plenerowe</a></li>
-            <li><a href="/kontakt">Kontakt</a></li>
+            <li><a href="https://artgrande.art"><img src="/ikony/home.png" style={{ width: '20px', height: '15px' }} /></a></li>
+            <li><a href="https://artgrande.art/spektakle">Spektakle dla szkół</a></li>
+            <li><a href="https://artgrande.art/kino">Kino plenerowe</a></li>
+            <li><a href="" className="active">Blog</a></li>
+            <li><a href="https://artgrande.art/kontakt">Kontakt</a></li>
           </ul>
         </nav>
       </header>
