@@ -1,6 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // ważne, jeśli chcesz zrobić statyczny export
+  // output: 'export',  <--- usuń albo zakomentuj
 }
-
-module.exports = nextConfig
