@@ -1,0 +1,1044 @@
+* {
+    box-sizing: border-box; /* Dla wszystkich elementów */
+}
+        /* Podstawowa stylizacja */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 15px;
+          }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #555, #222);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            color: white;
+            position: relative; /* Dodajemy pozycjonowanie, aby umożliwić działanie z-index */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            z-index: 1000; /* Na wierzchu */
+        }
+
+          /* Center the top logo */
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+        .home{
+            position: fixed;         /* Utrzymuje header na stałe u góry */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);  /* Czarny z 50% przezroczystością */
+  color: #fff;             /* Biały tekst dla kontrastu */
+  padding: 20px;
+  z-index: 1000;           /* Zapewnia, że header będzie nad innymi elementami */
+        }
+        header img {
+            height: 50px;
+            /* ZMIANA HEADERA PO SCROLLOWANIU (opcjonalne) */
+        .scrolled {
+        background: rgba(0, 0, 0, 0.8); /* Ciemne, półprzezroczyste */
+        backdrop-filter: blur(10px); /* Efekt szkła */
+        }
+        }
+        .container {
+            max-width: 1200px;
+          margin: 0 auto;
+          padding: 2rem;
+          text-align: center;
+          margin-bottom: 2rem;
+            
+          }
+        
+        .hero {
+            width: 100%;               /* nie 100vw, żeby nie było poziomego scrolla */
+            height: 100vh;             /* zawsze równo wysokości okna przeglądarki */
+            background-image: url('grafiki/grafika_home.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed; /* opcjonalnie: tło “zostaje” przy scroll’u */
+            
+            /* centrowanie zawartości */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            position: relative;
+            overflow: hidden;
+            color: white;
+          }
+          /* Overlay (ciemne przyciemnienie dla lepszej czytelności tekstu) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Zmniejsz, jeśli za ciemne */
+}
+/* Styl chochlika */
+.imp {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url('ikony/imp.png') no-repeat center/contain;
+  transition: transform 5s ease-in-out;
+}
+        /* Treść na tle */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin-top: 80px; /* odstęp równy wysokości headera */
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Przycisk */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    background: #0078ff;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #005bb5;
+}
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        /* Po kliknięciu na ikonę hamburgera */
+        nav ul.active {
+            display: flex;
+        }
+
+        /* Dodatkowe style dla menu */
+        .menu-toggle {
+         display: none;
+        }
+        /* Po kliknięciu na ikonę hamburgera */
+nav ul.active {
+    display: flex;
+}
+
+/* Ukrycie ikonki hamburgera po otwarciu menu */
+nav ul.active + .menu-toggle .hamburger {
+    display: none;
+}
+
+/* Pokazanie ikony "X" po otwarciu menu */
+nav ul.active + .menu-toggle .close {
+    display: block;
+}
+        /* Podświetlenie aktywnej strony i hover w menu */
+        nav ul li a.active {
+            background-color: #FF6A00; /* Pomarańczowe podświetlenie */
+        }
+
+        nav ul li a:hover {
+            background-color: #007BFF; /* Niebieskie podświetlenie przy hover */
+        }
+
+        .banner img {
+            display: block;    /* usuwa domyślne whitespace */
+            width: 100%;       /* zawsze wypełnia szerokość okna */
+            height: auto;      /* zachowuje proporcje */
+          }
+
+        /* --- Sekcja “O nas” --- */
+.about {
+  background-color: #fff;
+    color: #333;
+    padding: 4rem 0;
+  }
+  .about1 {
+    background-color: #E3F2FD;
+      color: #333;
+      padding: 4rem 0;
+    }
+    .about2 {
+      background-color: #fff;
+        color: #0D47A1;
+        padding: 4rem 0;
+      }
+  .about-kino {
+    color: #fff;
+    padding: 4rem 0;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('grafiki/kinotlo.png');
+      background-repeat: no-repeat;
+background-position: center ;
+background-size: cover;
+  }
+
+  .about-teatr {
+    color: #fff;
+    padding: 4rem 0;
+      background:  url('grafiki/teatrtlo.png');
+      background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+  }
+  
+  .about__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .about__subtitle {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+/* Flex‐row for each image+text pair */
+.about__row {
+  display: flex;
+  align-items: center;      /* vertically center text next to image */
+  justify-content: center;  /* center the whole row in the container */
+  gap: 2rem;                /* space between image and text */
+  margin-bottom: 2rem;
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* vertically center text next to image */
+  justify-content: center;  /* center the whole row in the container */
+  gap: 2rem;                /* space between image and text */
+  margin-bottom: 2rem;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;   /* h2 nad p */
+  max-width: 800px;
+}
+
+/* Make images responsive */
+.about__row img {
+  max-width: 600px;  /* or use 50% if you prefer relative sizing */
+  height: auto;
+  display: block;
+}
+ /* nagłówek między obrazkiem a tekstem */
+ .about__row .about__title {
+  order: 0;
+}
+/* Override the global centering of .about__intro */
+.about__row .about__column .about__intro {
+  max-width: 500px;
+  margin: 0;          /* remove top/bottom auto margins */
+  text-align: center;   /* text sits to the right of the image */
+  font-size: 1.125rem;/* ~18px */
+  line-height: 1.4;
+  order: 1;
+}
+  
+  .about__intro {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 15px;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  .blog-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.posts {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.post-card {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card img {
+  width: 100%;
+  height: 150px;
+}
+
+.post-card h2 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+main.post-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
+  flex-direction: row; /* <-- Ustawia sidebar po prawej stronie */
+   max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.single-post {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.post-main-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.post-date,
+.post-author,
+.post-category {
+  margin-right: 5px;
+  color: #222;
+}
+
+
+.post-category {
+  font-weight: 500;
+}
+
+
+.read-more {
+  align-self: start;
+  background: #2563eb; /* niebieski - Tailwind Indigo-600 */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: auto;
+  display: inline-block;
+}
+
+.read-more:hover {
+  background: #3b82f6; /* jaśniejszy niebieski */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.read-more:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.widget {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+}
+
+.recent-posts li {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.recent-posts img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+button.active {
+  font-weight: bold;
+  color: darkorange;
+}
+
+.sidebar .widget ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .widget ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+.sidebar .widget ul li a {
+  color: #0073aa;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.sidebar .widget ul li a:hover {
+  color: #005177;
+  text-decoration: underline;
+}
+
+.sidebar .widget ul li span.count {
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 13px;
+    margin-left: 8px;
+}
+
+.sidebar .widget ul li a.active {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.post-actions {
+  margin-top: 40px;
+}
+
+.prev-btn {
+  background-color: #1e40af; /* Indigo */
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prev-btn:hover {
+  background-color: #3b82f6; /* Lighter blue */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.prev-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+  
+  /* --- Karty ofertowe --- */
+  .about__cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  .card {
+    background: #fff;
+    flex: 1 1 300px;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .card__title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card__text {
+    line-height: 1.5;
+  }
+
+  .about__divider {
+    width: 80%;                /* 80% szerokości kontenera */
+    height: 2px;              /* wysokość daszka */
+    margin:  1rem auto;         /* odstęp i wyśrodkowanie */
+    background-color: red;     /* kolor */
+  }
+
+  /* --- Sekcja “Nasze Usługi” --- */
+.services {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 4rem 0;
+  }
+  .services__title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .services__intro {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .services__lead {
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* --- Karty ofertowe --- */
+  .services__cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* --- Formularz propozycji --- */
+  .services__proposal {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .proposal__title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .services__form {
+    display: grid;
+    gap: 1rem;
+    text-align: left;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .form-control {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  /* --- Przycisk --- */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+  }
+  .btn--primary {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+  }
+  
+  
+  
+  /* --- Call to action --- */
+  .about__cta {
+    text-align: center;
+  }
+  
+  .about__benefits {
+    list-style: disc inside;
+    margin: 1rem 0 2rem;
+    line-height: 1.6;
+    font-size:large;
+  }
+  
+  
+  /* Grid dla pierwszej sekcji z 3 kolumnami */
+  .three-columns {
+    background: linear-gradient(135deg, #e0ffe0, #fff);
+  }
+  
+  .three-columns .container {
+    background-color: #333;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr; /* Dwie równe kolumny (1fr) i jedna szersza (2fr) */
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .column {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .wide {
+    background-color: #e0f7fa; /* Kolor dla szerszej kolumny */
+  }
+  
+  /* Grid dla drugiej sekcji z 3 kolumnami o różnych szerokościach */
+  .three-columns-different-widths {
+    background-color: #333;
+    padding: 20px;
+  }
+  
+  .three-columns-different-widths .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr; /* Pierwsza kolumna wąska, druga średnia, trzecia szeroka */
+    gap: 10px;
+  }
+  
+  /* Kolory dla różnych kolumn */
+  .medium {
+    background-color: #ffe4e1; /* Kolor dla średniej kolumny */
+  }
+  
+  .large {
+    background-color: #f0f8ff; /* Kolor dla dużej kolumny */
+  }
+        .contact-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: gray; /* Kolor przycisku */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%; /* Wyśrodkowanie przycisku */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #555; /* Zmiana koloru przycisku przy najechaniu */
+        }
+        /* Modal (widżet powiększonego zdjęcia) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal.active {
+          display: flex;
+        }
+        #modalImage {
+          max-width: 90%;
+          max-height: 90%;
+          display: block;
+          cursor: auto;
+        }
+
+        .modal-content {
+          position: relative;         /* dla absolutnego position wewnątrz */
+          display: inline-block;      /* dopasuje się do rozmiaru obrazka */
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        /* Galeria */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.25);
+        }
+
+        .gallery-item {
+            flex: 0 0 auto;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+          }
+
+          .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+          }
+
+          .gallery-item img:hover {
+            transform: scale(1.05);
+          }
+          .gallery-wrapper {
+            margin-top: 40px;
+            margin-bottom: 60px;
+            padding: 20px;
+            background: #f7f7f7;
+            border-radius: 8px;
+          }
+
+          .gallery-wrapper h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #333;
+          }
+
+          .text-content {
+            line-height: 1.7;
+            font-size: 1.05rem;
+          }
+        /* Strzałki */
+        .modal .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .modal .prev {
+            left: 20px;
+        }
+
+        .modal .next {
+            right: 20px;
+        }
+        /* Stopka */
+        footer {
+            background: linear-gradient(135deg, #555, #222);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Kontener sekcji */
+        .section {
+            width: 100%;
+            background-color: #333;
+            padding: 40px 20px; /* Padding wewnątrz sekcji */
+        }
+        
+
+        .content ul:nth-child(odd) {
+            background-color: #f9f9f9; /* bardzo jasny szary, prawie biały */
+            color: #333;             /* ciemny, ale stonowany tekst */
+          }
+          
+          .content ul:nth-child(even) {
+            background-color: #e0e0e0; /* nieco ciemniejszy szary, ale nadal subtelny */
+            color: #333;
+          }
+        
+        .image {
+            width: 40%; /* Obrazek zajmuje 40% szerokości */
+            min-height: 100px;
+            flex-shrink: 0; /* Zapobiega zmniejszaniu obrazu */
+        }
+        
+        .content {
+            width: 100%; /* Treść zajmuje 60% szerokości */
+            justify-content: center; /* Wyśrodkowanie w pionie */
+            align-items: center; /* Wyśrodkowanie w poziomie */
+            color: black;
+            text-align: center; /* Wyrównanie tekstu do środka */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .lista{
+            display: flex;
+            gap: 10px;
+            
+        }
+        .content ul {
+            list-style: none; /* Remove default bullets */
+            margin: 0;
+            padding: 0;
+          }
+          
+          .content li {
+            margin-bottom: 10px;
+          }
+          .content li::before {
+            content: "✔"; /* Unicode checkmark symbol */
+            margin-right: 5px; /* Add spacing between icon and text */
+          }
+
+          .content ul h3 {
+            margin-bottom: 10px;
+          }
+  
+  .image img {
+    width: 100%; /* Obrazek rozciąga się na całą szerokość kontenera */
+    border-radius: 8px; /* Zaokrąglone rogi obrazka */
+  }
+  
+  /* Animacja poruszania obrazka */
+@keyframes moveImage {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(50px) translateY(-10px); /* Przemieszczenie obrazu */
+    }
+    100% {
+      transform: translateX(0) translateY(0); /* Powrót do początkowej pozycji */
+    }
+  }
+  
+
+        /* Media Queries - responsywność */
+
+        @media (max-width: 1024px) {
+            /* Ustawienia dla tabletów i większych ekranów */
+            .gallery-container img:hover {
+              transform: scale(1.05);
+          }
+        
+        }
+
+        @media (max-width: 768px) {
+            /* Ustawienia dla urządzeń mobilnych */
+            .container {
+              padding: 1rem;
+            }
+          
+            .logo img {
+              width: 80%;
+            }
+          
+            .about__row {
+              flex-direction: column;  /* obrazek nad tekstem */
+              align-items: center;    /* wyrównaj tekst do środka */
+              gap: 1rem;
+            }
+          
+            .about__row img {
+              max-width: 100%;
+              order: -1; /* zawsze obrazek nad tekstem */
+            }
+          
+            .about__row .about__intro {
+              max-width: 100%;
+              font-size: 0.95rem;
+              line-height: 1.5;
+            }
+            .about__cards {
+                flex-direction: column;
+                gap: 1.5rem;
+              }
+              .services__cards {
+                flex-direction: column;
+                gap: 1.5rem;
+              }
+            nav ul {
+                display: none;  /* Ukrywamy menu */
+                width: 40%;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 73px;  /* Wysokość nagłówka */
+                right: 0;
+                z-index: 9999;  /* Zapewniamy, że menu będzie na wierzchu innych elementów */
+            }
+            
+        
+            nav ul li a {
+                color: white;
+                padding: 10px;
+                display: block;
+            }
+            .menu-toggle {
+                display: block;
+                font-size: 30px;
+                cursor: pointer;
+                z-index: 10000;  /* Zapewniamy, że przycisk będzie widoczny */
+            }
+            .hamburger, .close {
+                display: block;
+                font-size: 30px;
+                color: white;
+                padding: 5px;
+                text-align: center;
+                cursor: pointer;
+            }
+        
+            .menu-toggle .close {
+                display: none;  /* Domyślnie nie pokazujemy "X" */
+            }
+            .section .container {
+                flex-direction: column; /* Na mniejszych ekranach zmiana na układ pionowy */
+                align-items: center;
+            }
+        
+            .section .image,
+            .section .content {
+                width: 100%; /* Pełna szerokość na mniejszych ekranach */
+            }
+            
+        
+              .custom-section .container {
+                flex-direction: column; /* Na mniejszych ekranach obrazek idzie na górę */
+            }
+        
+            .custom-section .image {
+                display: none; /* Ukrywa zdjęcie na urządzeniach mobilnych */
+            }
+        
+            .custom-section .content {
+                width: 100%; /* Ustalamy, że treść zajmuje całą szerokość ekranu */
+                padding: 20px; /* Dodajemy padding, by treść miała odpowiedni odstęp */
+            }
+              /* Dostosowanie sekcji z trzema kolumnami */
+  .three-columns .container {
+    grid-template-columns: 1fr; /* Jedna kolumna na mniejszych ekranach */
+  }
+
+  /* Dostosowanie sekcji z trzema kolumnami o różnych szerokościach */
+  .three-columns-different-widths .container {
+    grid-template-columns: 1fr 1fr; /* Dwie kolumny na mniejszych ekranach */
+  }
+
+  /* Ustawienie mniejszych paddingów w kolumnach na małych ekranach */
+  .column, .wide, .medium, .large {
+    padding: 10px;
+  }
+            .gallery-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                padding: 15px 0;
+            }
+        
+            .gallery-container img {
+                max-width: 200px;
+            }
+
+            .contact-button {
+                width: 100%;
+                padding: 15px;
+                font-size: 16px;
+            }
+            .hero {
+                background-attachment: none; /* Parallax effect (opcjonalnie) */
+              }
+              .hero h1 {
+                font-size: 1rem;
+                margin: auto;
+            }
+        
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .carousel img {
+                width: 100%;
+                height: 120px;
+            }
+        
+            .gallery-container img {
+                max-width: 150px;
+            }
+        }
